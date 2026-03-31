@@ -37,34 +37,57 @@
         <div>
             <img src="./img/Eduardo.jpeg" alt="Foto de Eduardo" class="foto-perfil">
             <h1>Eduardo Medeiros</h1>
-            <p class="cabecalho-subtitulo">Analista de Dados</p>
+            <p class="cabecalho-subtitulo">Analista de Dados & Infraestrutura</p>
         </div>
     </main>
 
     <!-- ================= SOBRE ================= -->
-    <section id="sobre" class="sobre">
-        <h2 class="sobre-titulo">Sobre Mim</h2>
+    <!-- ================= SOBRE ================= -->
+<section id="sobre" class="sobre">
+    <h2 class="sobre-titulo">Sobre Mim</h2>
 
-        <div class="sobre-caixa">
+    <div class="sobre-caixa sobre-flex">
+
+        <!-- TEXTO -->
+        <div class="sobre-texto">
             <p class="sobre-paragrafo">
                 Sou estudante de Ciência da Computação com foco em <strong>Análise de Dados</strong> e apaixonado por
-                transformar dados
-                em informações estratégicas para apoiar a tomada de decisão. Tenho experiência na construção de
-                dashboards no <strong>Power BI</strong>, desenvolvendo visualizações claras, objetivas e orientadas a
-                indicadores de
-                negócio.
+                transformar dados em informações estratégicas para apoiar a tomada de decisão. Tenho experiência na construção de
+                dashboards no <strong>Power BI</strong>, desenvolvendo visualizações claras, objetivas e orientadas a indicadores de negócio.
 
-                Possuo conhecimento em <strong>SQL, Excel e Python para manipulação, tratamento e análise de
-                    dados</strong>, além de uma
-                base sólida em lógica e desenvolvimento, o que me permite estruturar soluções eficientes e bem
-                organizadas. Atualmente, busco oportunidades na área de dados para aplicar meus conhecimentos, evoluir
-                tecnicamente e gerar impacto real através da análise de informações.
+                Possuo conhecimento em <strong>SQL, Excel e Python para manipulação, tratamento e análise de dados</strong>, além de uma
+                base sólida em lógica e desenvolvimento, o que me permite estruturar soluções eficientes e bem organizadas.
+                Atualmente, busco oportunidades na área de dados para aplicar meus conhecimentos, evoluir tecnicamente e gerar impacto real através da análise de informações.
 
-                Sou movido por aprendizado contínuo, curiosidade e disciplina, sempre buscando aprimorar minhas
-                habilidades e me preparar para desafios maiores na área de tecnologia.
+                Sou movido por aprendizado contínuo, curiosidade e disciplina, sempre buscando aprimorar minhas habilidades e me preparar para desafios maiores na área de tecnologia.
             </p>
         </div>
-    </section>
+
+        <!-- DIVISOR -->
+        <div class="sobre-divisor"></div>
+
+        <!-- DADOS -->
+        <div class="sobre-info">
+            <h3>Informações</h3>
+
+            <div class="info-item">
+                <span>Cidade</span>
+                <p>Itaquera, São Paulo - SP</p>
+            </div>
+
+            <div class="info-item">
+                <span>Email</span>
+                <p>medeiroseduardo88@gmail.com</p>
+            </div>
+
+            <div class="info-item">
+                <span>Telefone</span>
+                <p>+55 11 96989-2900</p>
+            </div>
+        </div>
+
+    </div>
+</section>
 
     <!-- ================= EXPERIÊNCIA ================= -->
     <section id="experiencia" class="experiencia">
@@ -177,7 +200,7 @@
                 <div class="conteudo-projeto">
                     <h3 class="info-projetos">Projeto 2</h3>
                     <p class="paragrafo-projetos">
-                        
+
                     </p>
 
                     <div class="projeto-links">
@@ -194,38 +217,39 @@
     <!-- ================= Certificados ================= -->
 
     <section id="certificados" class="certificados">
-    <h2 class="section-title">Certificados</h2>
+        <h2 class="section-title">Certificados</h2>
 
-    <div class="certificados-grid">
+        <div class="certificados-grid">
 
-        <div class="card-certificado">
-            <p>OUT 2025</p>
-            <h3>Estatísticas com Python</h3>
-            <span>ALURA</span>
-            <a href="certificados/Eduardo Medeiros Raposo - Curso Estatísticas com Python Frequencias e Medidas.pdf" target="_blank" class="btn-certificado">
-                Visualizar
-            </a>
+            <div class="card-certificado">
+                <p>OUT 2025</p>
+                <h3>Estatísticas com Python</h3>
+                <span>ALURA</span><br>
+                <a href="certificados/Eduardo Medeiros Raposo - Curso Estatísticas com Python Frequencias e Medidas.pdf"
+                    target="_blank" class="btn-certificado">
+                    Visualizar
+                </a>
+            </div>
+
+            <div class="card-certificado">
+                <p>Plataforma: Udemy</p>
+                <h3>Power BI para Análise de Dados</h3>
+                <span>2024</span><br>
+                <a href="assets/certificados/powerbi.pdf" target="_blank" class="btn-certificado">
+                    Visualizar
+                </a>
+            </div>
+
+            <div class="card-certificado">
+                <p>Plataforma: Udemy</p>
+                <h3>Power BI para Análise de Dados</h3>
+                <span>2024</span><br>
+                <a href="assets/certificados/powerbi.pdf" target="_blank" class="btn-certificado">
+                    Visualizar
+                </a>
+            </div>
         </div>
-
-          <div class="card-certificado">
-            <p>Plataforma: Udemy</p>
-            <h3>Power BI para Análise de Dados</h3>
-            <span>2024</span>
-            <a href="assets/certificados/powerbi.pdf" target="_blank" class="btn-certificado">
-                Visualizar
-            </a>
-        </div>
-
-          <div class="card-certificado">
-            <p>Plataforma: Udemy</p>
-            <h3>Power BI para Análise de Dados</h3>
-            <span>2024</span>
-            <a href="assets/certificados/powerbi.pdf" target="_blank" class="btn-certificado">
-                Visualizar
-            </a>
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- ================= CONTATO ================= -->
     <section id="contatos" class="contatos">
@@ -272,21 +296,27 @@
 
     <!-- ================= MODAL ================= -->
     <div class="modal-projeto" id="modalProjeto">
-        <div class="modal-conteudo">
-            <span class="fechar-modal" onclick="fecharModal()">&times;</span>
+    <div class="modal-conteudo">
+        <span class="fechar-modal" onclick="fecharModal()">&times;</span>
 
-            <h3>Projeto 1 - Portfólio</h3>
+        <h3 id="modal-titulo">Projeto 1 - Portfólio</h3>
 
-            <p class="descricao-projeto">
-                Projeto desenvolvido em HTML e CSS desenvolvendo o próprio Portfólio.
-            </p>
+        <p class="descricao-projeto" id="modal-descricao">
+            Projeto desenvolvido em HTML e CSS desenvolvendo o próprio Portfólio.
+        </p>
 
-            <div class="galeria">
-                <img src="./img/projeto1-1.png" alt="Imagem 1">
+        <div class="galeria-container">
+            <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
+            
+            <div class="galeria-slides">
+                <img src="./img/projeto1-1.png" class="slide-ativo" alt="Imagem 1">
                 <img src="./img/projeto1-2.png" alt="Imagem 2">
-            </div>
+                </div>
+
+            <button class="next" onclick="mudarSlide(1)">&#10095;</button>
         </div>
     </div>
+</div>
 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
@@ -295,60 +325,79 @@
             background: {
                 color: "transparent"
             },
+
             fpsLimit: 60,
+
             interactivity: {
                 events: {
                     onHover: {
                         enable: true,
-                        mode: "repulse"
+                        mode: "grab"
                     },
                     onClick: {
                         enable: true,
-                        mode: "push"
+                        mode: "bubble"
                     }
                 },
                 modes: {
-                    repulse: {
-                        distance: 120,
-                        duration: 0.4
+                    grab: {
+                        distance: 180,
+                        links: {
+                            opacity: 0.6
+                        }
                     },
-                    push: {
-                        quantity: 4
+                    bubble: {
+                        distance: 200,
+                        size: 6,
+                        duration: 0.5,
+                        opacity: 1
                     }
                 }
             },
+
             particles: {
                 number: {
-                    value: 40,
-                    density: {
-                        enable: true,
-                        area: 800
-                    }
+                    value: 25
                 },
+
                 color: {
-                    value: "#00bfff"
+                    value: ["#00bfff", "#7c3aed", "#22c55e"]
                 },
-                links: {
-                    enable: true,
-                    color: "#00bfff",
-                    distance: 150,
-                    opacity: 0.3,
-                    width: 1
+
+                shape: {
+                    type: "circle"
                 },
+
+                opacity: {
+                    value: 0.4,
+                    random: true
+                },
+
+                size: {
+                    value: { min: 2, max: 5 },
+                    random: true
+                },
+
                 move: {
                     enable: true,
-                    speed: 1,
+                    speed: 0.6,
+                    direction: "none",
+                    random: true,
+                    straight: false,
                     outModes: {
-                        default: "bounce"
+                        default: "out"
                     }
                 },
-                size: {
-                    value: 2
-                },
-                opacity: {
-                    value: 0.5
+
+                links: {
+                    enable: true,
+                    distance: 130,
+                    opacity: 0.15,
+                    width: 1,
+                    color: "#ffffff"
                 }
             },
+
             detectRetina: true
         });
     </script>

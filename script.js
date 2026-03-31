@@ -83,3 +83,69 @@ document.querySelectorAll('.card-habilidade, .exp-item, .projetos-card').forEach
     el.style.transition = "all 0.6s ease-out";
     observer.observe(el);
 });
+
+let slideIndex = 0;
+
+// Garante que o modal e os elementos existam antes de rodar
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("modalProjeto");
+
+    // Função para abrir o modal
+    window.abrirModal = function(event) {
+        // Se clicar no link do GitHub, não abre o modal
+        if (event && (event.target.closest('a') || event.target.closest('i'))) {
+            return;
+        }
+
+        if (modal) {
+            modal.style.display = "flex";
+            slideIndex = 0; // Sempre começa na primeira foto
+            mostrarSlide(slideIndex);
+            
+            setTimeout(() => {
+                modal.style.transition = "opacity 0.4s ease";
+                modal.style.opacity = "1";
+            }, 10);
+        }
+    };
+
+    window.fecharModal = function() {
+        if (modal) {
+            modal.style.opacity = "0";
+            setTimeout(() => {
+                modal.style.display = "none";
+            }, 400);
+        }
+    };
+
+    // Fechar ao clicar fora da caixa
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            fecharModal();
+        }
+    };
+});
+
+// LÓGICA DA GALERIA
+function mudarSlide(n) {
+    mostrarSlide(slideIndex += n);
+}
+
+function mostrarSlide(n) {
+    const slides = document.querySelectorAll(".galeria-slides img");
+    if (slides.length === 0) return;
+
+    // Loop infinito (volta ao início ou fim)
+    if (n >= slides.length) { slideIndex = 0; }
+    if (n < 0) { slideIndex = slides.length - 1; }
+
+    // Esconde todas e mostra a atual
+    slides.forEach(img => {
+        img.style.display = "none";
+        img.classList.remove("slide-ativo");
+    });
+
+    slides[slideIndex].style.display = "block";
+    slides[slideIndex].classList.add("slide-ativo");
+}
+
