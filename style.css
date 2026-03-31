@@ -1,0 +1,442 @@
+/* =====================================================
+   VARIÁVEIS E SETUP (PALETA DARK DATA)
+===================================================== */
+:root {
+    --primary: #00bfff; /* Cor das suas partículas */
+    --primary-glow: rgba(0, 191, 255, 0.4);
+    --bg-dark: #0a0b10;
+    --card-bg: rgba(20, 22, 30, 0.7);
+    --text-main: #e0e0e0;
+    --text-dim: #a0a0a0;
+    --border: rgba(255, 255, 255, 0.08);
+    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Reset & Base */
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Garante que o canvas das partículas fique ao fundo */
+#tsparticles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* =====================================================
+   NAVEGAÇÃO (GLASSMORPHISM)
+===================================================== */
+.navegacao {
+    position: fixed;
+    top: 0; width: 100%;
+    background: rgba(10, 11, 16, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
+
+.menu-link:hover {
+    color: var(--primary);
+    text-shadow: 0 0 10px var(--primary-glow);
+}
+
+/* =====================================================
+   HERO / CABEÇALHO (IMPACTO)
+===================================================== */
+.cabecalho {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.foto-perfil {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+    box-shadow: 0 0 30px var(--primary-glow);
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.foto-perfil:hover {
+    transform: scale(1.05) rotate(5deg);
+}
+
+.cabecalho h1 {
+    font-size: 3.5rem;
+    letter-spacing: -1px;
+    background: linear-gradient(to right, #fff, var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cabecalho-subtitulo {
+    font-size: 1.2rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+/* =====================================================
+   SEÇÕES GERAIS
+===================================================== */
+section {
+    padding: 100px 10%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px; left: 50%;
+    transform: translateX(-50%);
+    width: 50px; height: 3px;
+    background: var(--primary);
+}
+
+/* =====================================================
+   CARDS & GRIDS (ESTILO DASHBOARD)
+===================================================== */
+.sobre-caixa, .exp-conteudo, .card-habilidade, .projetos-card, .card-certificado {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    padding: 2rem;
+    transition: var(--transition);
+}
+
+.card-habilidade:hover, .projetos-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Habilidades Grid */
+.habilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card-habilidade ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.card-habilidade li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    color: var(--text-dim);
+}
+
+.card-habilidade li::before {
+    content: "▹";
+    color: var(--primary);
+    margin-right: 10px;
+}
+
+/* =====================================================
+   LINHA DO TEMPO (LOGÍSTICA & DADOS)
+===================================================== */
+.linha-do-tempo {
+    position: relative;
+    border-left: 2px solid var(--border);
+    padding-left: 2rem;
+    margin-left: 1rem;
+}
+
+.exp-item {
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.exp-ponto {
+    position: absolute;
+    left: -2.45rem;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background: var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--primary);
+}
+
+.exp-data {
+    color: var(--primary);
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* =====================================================
+   PROJETOS & CERTIFICADOS
+===================================================== */
+.projetos-caixa, .certificados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.projeto-imagem {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.btn-projeto, .btn-certificado, .botao-form {
+    display: inline-block;
+    padding: 10px 20px;
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-projeto:hover, .btn-certificado:hover, .botao-form:hover {
+    background: var(--primary);
+    color: #000;
+    box-shadow: 0 0 20px var(--primary-glow);
+}
+
+/* =====================================================
+   FORMULÁRIO (CLEAN & MODERN)
+===================================================== */
+.formulario-contato {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.campo-form {
+    width: 100%;
+    padding: 15px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: white;
+    margin-bottom: 1rem;
+    outline: none;
+}
+
+.campo-form:focus {
+    border-color: var(--primary);
+}
+
+/* =====================================================
+   MODAL & THEME TOGGLE
+===================================================== */
+.btn-tema {
+    position: fixed;
+    bottom: 20px; right: 20px;
+    width: 50px; height: 50px;
+    border-radius: 50%;
+    background: var(--primary);
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    color: #000;
+}
+
+.modal-projeto {
+    display: none; /* Mantido oculto por padrão conforme seu script */
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    backdrop-filter: blur(10px);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-conteudo {
+    background: var(--bg-dark);
+    padding: 3rem;
+    border-radius: 20px;
+    max-width: 800px;
+    position: relative;
+    border: 1px solid var(--primary);
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    .menu { display: none; } /* Pode ser substituído por um menu hamburguer */
+    .cabecalho h1 { font-size: 2.5rem; }
+    section { padding: 60px 5%; }
+}
+
+/* =====================================================
+   ESTILIZAÇÃO DO RODAPÉ (FOOTER)
+===================================================== */
+footer {
+    background: rgba(15, 17, 26, 0.9); /* Um pouco mais escuro que os cards */
+    backdrop-filter: blur(15px);
+    border-top: 1px solid var(--border);
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #fff, var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.social-links a {
+    color: var(--text-dim);
+    font-size: 1.8rem;
+    transition: var(--transition);
+    position: relative;
+}
+
+/* Efeito de brilho nos ícones sociais */
+.social-links a:hover {
+    color: var(--primary);
+    transform: translateY(-5px);
+    text-shadow: 0 0 15px var(--primary-glow);
+}
+
+/* Estilo do Botão Flutuante de Download (dentro do footer) */
+.btn-flutuante {
+    background: var(--primary);
+    color: #000 !important; /* Força o ícone a ficar preto no fundo azul */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: 0 0 20px var(--primary-glow);
+}
+
+.btn-flutuante:hover {
+    transform: scale(1.1) rotate(10deg) !important;
+    background: #fff;
+}
+
+/* Texto de Copyright */
+footer::after {
+    content: "© 2026 Eduardo Medeiros Raposo | Analista de Dados";
+    display: block;
+    margin-top: 3rem;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    letter-spacing: 1px;
+}
+
+/* =====================================================
+   ESTILO PADRÃO (MODO ESCURO)
+===================================================== */
+.menu-link {
+    text-decoration: none;
+    color: #ffffff !important; /* Letras BRANCAS por padrão (Modo Escuro) */
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+}
+
+.menu-link:hover {
+    color: var(--primary) !important;
+}
+
+/* =====================================================
+   CONFIGURAÇÃO DO MODO CLARO (LIGHT MODE)
+===================================================== */
+body.light-theme {
+    --bg-dark: #f0f2f5;          
+    --card-bg: rgba(255, 255, 255, 0.85); 
+    --text-main: #1a1a1b;        
+    --text-dim: #4e4e4e;         
+    --border: rgba(0, 0, 0, 0.1); 
+}
+
+/* Ajustes específicos para o Modo Claro */
+body.light-theme .menu-link {
+    color: #333 !important; /* As letras ficam ESCURAS quando o Modo Claro liga */
+}
+
+body.light-theme .navegacao {
+    background: rgba(255, 255, 255, 0.8); /* Fundo do menu fica claro */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .cabecalho h1 {
+    background: linear-gradient(to right, #1a1a1b, var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.light-theme .exp-conteudo, 
+body.light-theme .card-habilidade, 
+body.light-theme .projetos-card {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+body.light-theme .btn-tema {
+    background: #1a1a1b;
+    color: var(--primary);
+}
