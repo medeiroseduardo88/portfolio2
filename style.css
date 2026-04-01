@@ -554,3 +554,60 @@ body.light-theme .info-item{
         height:1px;
     }
 }
+
+/* ================= NAV CONTAINER ================= */
+.navegacao{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 14px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centraliza o conjunto */
+
+    backdrop-filter: blur(10px);
+    background: rgba(10,11,16,0.8);
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
+}
+
+/* Agrupa logo + menu como um bloco central */
+.navegacao{
+    gap: 40px; /* espaço entre logo e menu */
+}
+
+/* ================= LOGO ================= */
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    width:100px;
+    height:100px;
+    object-fit:cover;
+    border-radius:50%;
+    transition:.4s;
+}
+
+.logo img:hover{
+    transform:scale(1.08) rotate(5deg);
+    box-shadow:0 0 20px var(--primary-glow);
+}
+
+/* ================= MENU ================= */
+.menu{
+    display:flex;
+    align-items:center;
+    gap:2rem;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+/* Garante alinhamento perfeito dos links */
+.menu li{
+    display:flex;
+    align-items:center;
+}

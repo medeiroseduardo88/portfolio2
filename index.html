@@ -20,7 +20,13 @@
     <div id="tsparticles"></div>
 
     <!-- ================= NAVEGAÇÃO ================= -->
+
     <nav class="navegacao">
+
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo Eduardo">
+        </div>
+
         <ul class="menu">
             <li><a href="#inicio" class="menu-link">Início</a></li>
             <li><a href="#sobre" class="menu-link">Sobre</a></li>
@@ -42,52 +48,58 @@
     </main>
 
     <!-- ================= SOBRE ================= -->
-    <!-- ================= SOBRE ================= -->
-<section id="sobre" class="sobre">
-    <h2 class="sobre-titulo">Sobre Mim</h2>
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
 
-    <div class="sobre-caixa sobre-flex">
+        <div class="sobre-caixa sobre-flex">
 
-        <!-- TEXTO -->
-        <div class="sobre-texto">
-            <p class="sobre-paragrafo">
-                Sou estudante de Ciência da Computação com foco em <strong>Análise de Dados</strong> e apaixonado por
-                transformar dados em informações estratégicas para apoiar a tomada de decisão. Tenho experiência na construção de
-                dashboards no <strong>Power BI</strong>, desenvolvendo visualizações claras, objetivas e orientadas a indicadores de negócio.
+            <!-- TEXTO -->
+            <div class="sobre-texto">
+                <p class="sobre-paragrafo">
+                    Sou estudante de Ciência da Computação com foco em <strong>Análise de Dados</strong> e apaixonado
+                    por
+                    transformar dados em informações estratégicas para apoiar a tomada de decisão. Tenho experiência na
+                    construção de
+                    dashboards no <strong>Power BI</strong>, desenvolvendo visualizações claras, objetivas e orientadas
+                    a indicadores de negócio.
 
-                Possuo conhecimento em <strong>SQL, Excel e Python para manipulação, tratamento e análise de dados</strong>, além de uma
-                base sólida em lógica e desenvolvimento, o que me permite estruturar soluções eficientes e bem organizadas.
-                Atualmente, busco oportunidades na área de dados para aplicar meus conhecimentos, evoluir tecnicamente e gerar impacto real através da análise de informações.
+                    Possuo conhecimento em <strong>SQL, Excel e Python para manipulação, tratamento e análise de
+                        dados</strong>, além de uma
+                    base sólida em lógica e desenvolvimento, o que me permite estruturar soluções eficientes e bem
+                    organizadas.
+                    Atualmente, busco oportunidades na área de dados para aplicar meus conhecimentos, evoluir
+                    tecnicamente e gerar impacto real através da análise de informações.
 
-                Sou movido por aprendizado contínuo, curiosidade e disciplina, sempre buscando aprimorar minhas habilidades e me preparar para desafios maiores na área de tecnologia.
-            </p>
+                    Sou movido por aprendizado contínuo, curiosidade e disciplina, sempre buscando aprimorar minhas
+                    habilidades e me preparar para desafios maiores na área de tecnologia.
+                </p>
+            </div>
+
+            <!-- DIVISOR -->
+            <div class="sobre-divisor"></div>
+
+            <!-- DADOS -->
+            <div class="sobre-info">
+                <h3>Informações</h3>
+
+                <div class="info-item">
+                    <span>Cidade</span>
+                    <p>Itaquera, São Paulo - SP</p>
+                </div>
+
+                <div class="info-item">
+                    <span>Email</span>
+                    <p>medeiroseduardo88@gmail.com</p>
+                </div>
+
+                <div class="info-item">
+                    <span>Telefone</span>
+                    <p>+55 11 96989-2900</p>
+                </div>
+            </div>
+
         </div>
-
-        <!-- DIVISOR -->
-        <div class="sobre-divisor"></div>
-
-        <!-- DADOS -->
-        <div class="sobre-info">
-            <h3>Informações</h3>
-
-            <div class="info-item">
-                <span>Cidade</span>
-                <p>Itaquera, São Paulo - SP</p>
-            </div>
-
-            <div class="info-item">
-                <span>Email</span>
-                <p>medeiroseduardo88@gmail.com</p>
-            </div>
-
-            <div class="info-item">
-                <span>Telefone</span>
-                <p>+55 11 96989-2900</p>
-            </div>
-        </div>
-
-    </div>
-</section>
+    </section>
 
     <!-- ================= EXPERIÊNCIA ================= -->
     <section id="experiencia" class="experiencia">
@@ -231,7 +243,7 @@
                 </a>
             </div>
 
-               <div class="card-certificado">
+            <div class="card-certificado">
                 <p>OUT 2025</p>
                 <h3>Estatísticas com Python</h3>
                 <span>ALURA</span><br>
@@ -241,7 +253,7 @@
                 </a>
             </div>
 
-               <div class="card-certificado">
+            <div class="card-certificado">
                 <p>OUT 2025</p>
                 <h3>Estatísticas com Python</h3>
                 <span>ALURA</span><br>
@@ -298,27 +310,27 @@
 
     <!-- ================= MODAL ================= -->
     <div class="modal-projeto" id="modalProjeto">
-    <div class="modal-conteudo">
-        <span class="fechar-modal" onclick="fecharModal()">&times;</span>
+        <div class="modal-conteudo">
+            <span class="fechar-modal" onclick="fecharModal()">&times;</span>
 
-        <h3 id="modal-titulo">Projeto 1 - Portfólio</h3>
+            <h3 id="modal-titulo">Projeto 1 - Portfólio</h3>
 
-        <p class="descricao-projeto" id="modal-descricao">
-            Projeto desenvolvido em HTML e CSS desenvolvendo o próprio Portfólio.
-        </p>
+            <p class="descricao-projeto" id="modal-descricao">
+                Projeto desenvolvido em HTML e CSS desenvolvendo o próprio Portfólio.
+            </p>
 
-        <div class="galeria-container">
-            <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
-            
-            <div class="galeria-slides">
-                <img src="./img/projeto1-1.png" class="slide-ativo" alt="Imagem 1">
-                <img src="./img/projeto1-2.png" alt="Imagem 2">
+            <div class="galeria-container">
+                <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
+
+                <div class="galeria-slides">
+                    <img src="./img/projeto1-1.png" class="slide-ativo" alt="Imagem 1">
+                    <img src="./img/projeto1-2.png" alt="Imagem 2">
                 </div>
 
-            <button class="next" onclick="mudarSlide(1)">&#10095;</button>
+                <button class="next" onclick="mudarSlide(1)">&#10095;</button>
+            </div>
         </div>
     </div>
-</div>
 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
