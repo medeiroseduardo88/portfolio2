@@ -173,7 +173,6 @@ h2::after {
 }
 
 .card-habilidade li::before {
-    content: "▹";
     color: var(--primary);
     margin-right: 10px;
 }
