@@ -149,6 +149,14 @@ h2::after {
     transition: var(--transition);
 }
 
+span {
+    color: coral;
+}
+
+strong {
+    color: var(--primary);
+}
+
 .card-habilidade:hover, .projetos-card:hover {
     border-color: var(--primary);
     transform: translateY(-5px);
@@ -333,6 +341,10 @@ footer h3 {
     background: linear-gradient(to right, #fff, var(--primary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+h4 {
+    color: coral;
 }
 
 .social-links {
@@ -582,8 +594,8 @@ body.light-theme .info-item{
 }
 
 .logo img{
-    width:100px;
-    height:100px;
+    width: 75px;;
+    height: 75px;
     object-fit:cover;
     border-radius:50%;
     transition:.4s;
@@ -619,3 +631,26 @@ body.light-theme .logo img{
     filter: none;
 }
 
+/* TAGS / NUVEM DE PALAVRAS */
+.tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:15px 0;
+}
+
+.tags span{
+    font-size:12px;
+    padding:1px 12px;
+    border-radius:20px;
+    background: rgba(0,191,255,0.12);
+    border:1px solid rgba(0,191,255,0.4);
+    color: var(--primary);
+    transition:0.3s;
+}
+
+.tags span:hover{
+    background: var(--primary);
+    color:#000;
+    transform:scale(1.05);
+}
