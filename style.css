@@ -424,7 +424,7 @@ h4 {
 
 /* Texto de Copyright */
 footer::after {
-    content: "© 2026 Eduardo Medeiros Raposo | Analista de Dados & Infraestrutura";
+    content: "© 2026 Eduardo Medeiros | Todos os direitos reservados.";
     display: block;
     margin-top: 3rem;
     font-size: 0.8rem;
