@@ -97,6 +97,8 @@ body {
     margin-bottom: 1.5rem;
     object-fit: cover;
     transition: var(--transition);
+    object-position: 30% 60%;
+
 }
 
 .foto-perfil:hover {
