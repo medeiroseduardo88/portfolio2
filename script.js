@@ -49,6 +49,42 @@ themeToggle.addEventListener("click", () => {
 function enviarWhats(event) {
     event.preventDefault(); // Impede o recarregamento da página
 
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("modalProjeto");
+
+    window.abrirModal = function(event) {
+        if (event && (event.target.closest('a') || event.target.closest('i'))) {
+            return;
+        }
+
+        if (!modal) return;
+
+        modal.style.display = "flex";
+        modal.style.opacity = "0";
+        setTimeout(() => {
+            modal.style.transition = "opacity 0.4s ease";
+            modal.style.opacity = "1";
+        }, 10);
+    };
+
+    window.fecharModal = function() {
+        if (!modal) return;
+
+        modal.style.opacity = "0";
+        setTimeout(() => {
+            modal.style.display = "none";
+        }, 400);
+    };
+
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            fecharModal();
+        }
+    };
+});
+function enviarWhats(event) {
+    event.preventDefault(); // Impede o recarregamento da página
+
     const nome = document.getElementById("nome").value;
     const mensagem = document.getElementById("mensagem").value;
     const meuNumero = "55119XXXXXXXX"; // Coloque seu número aqui (com DDD)
@@ -148,4 +184,4 @@ function mostrarSlide(n) {
     slides[slideIndex].style.display = "block";
     slides[slideIndex].classList.add("slide-ativo");
 }
-
+}
