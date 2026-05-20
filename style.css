@@ -1095,3 +1095,8 @@ body.light-theme .logo img {
 .btn:hover {
     background: var(--cor-primaria-hover);
 }
+
+:root{
+  --cor-primaria: #00bfff;      /* laranja */
+  --cor-primaria-hover: #ea580c;
+}
