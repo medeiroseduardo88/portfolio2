@@ -862,3 +862,172 @@ body.light-theme .logo img {
         transform: translateY(-10px);
     }
 }
+
+/* ================================= */
+/* 📱 RESPONSIVIDADE MOBILE */
+/* ================================= */
+
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    .navegacao {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .menu {
+        flex-direction: column;
+        background: rgba(0,0,0,0.9);
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+    /* HERO */
+    .cabecalho {
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .foto-perfil {
+        width: 140px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .cabecalho-subtitulo {
+        font-size: 16px;
+    }
+
+    /* SOBRE */
+    .sobre {
+        padding: 40px 20px;
+    }
+
+    .sobre-flex {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .sobre-divisor {
+        display: none;
+    }
+
+    .sobre-texto,
+    .sobre-info {
+        width: 100%;
+    }
+
+    .sobre-titulo {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .sobre-paragrafo {
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    /* EXPERIÊNCIA */
+    .experiencia {
+        padding: 40px 20px;
+    }
+
+    .experiencia-titulo {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .exp-conteudo {
+        padding: 15px;
+    }
+
+    /* HABILIDADES */
+    .habilidades-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .tecnologias-titulo {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    /* PROJETOS */
+    .projetos {
+        padding: 40px 20px;
+    }
+
+    .projetos-caixa {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .projetos-card {
+        width: 100%;
+    }
+
+    .projetos-titulo {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    /* CERTIFICADOS */
+    .certificados {
+        padding: 40px 20px;
+    }
+
+    .certificados-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* CONTATO */
+    .contatos {
+        padding: 40px 20px;
+    }
+
+    .formulario-contato {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .campo-form {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .botao-form {
+        width: 100%;
+    }
+
+    /* FOOTER */
+    footer {
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    /* TEXTOS GERAIS */
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+}
