@@ -877,7 +877,7 @@ body.light-theme .logo img {
 
     .menu {
         flex-direction: column;
-        background: rgba(0,0,0,0.9);
+        background: rgba(0, 0, 0, 0.9);
         position: absolute;
         top: 70px;
         right: 0;
@@ -897,7 +897,8 @@ body.light-theme .logo img {
     }
 
     .foto-perfil {
-        width: 140px;
+        width: 280px;
+        height: 280px;
     }
 
     h1 {
@@ -1043,7 +1044,7 @@ body.light-theme .logo img {
 }
 
 /* MENU MOBILE */
-@media (max-width:768px){
+@media (max-width:768px) {
 
     .menu-toggle {
         display: block;
@@ -1071,4 +1072,26 @@ body.light-theme .logo img {
     .menu.ativo {
         right: 0;
     }
+}
+
+:root {
+    --cor-primaria: #2563eb;
+    --cor-primaria-hover: #1d4ed8;
+    --cor-texto-botao: #ffffff;
+}
+
+/* BOTÃO */
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    background: var(--cor-primaria);
+    color: var(--cor-texto-botao);
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--cor-primaria-hover);
 }
