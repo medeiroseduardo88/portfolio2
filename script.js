@@ -1,41 +1,59 @@
 /* =====================================================
-   CONFIGURAÇÕES DE MODAL (EFEITO FADE-IN)
+   MODAL PROJETOS
 ===================================================== */
-const modal = document.getElementById("modalProjeto");
 
-function abrirModal() {
+const modal = document.getElementById("modalProjeto");
+let slideIndex = 0;
+
+// Abrir modal
+function abrirModal(event) {
+
+    // Impede abrir ao clicar em links
+    if (event && (event.target.closest("a") || event.target.closest("i"))) {
+        return;
+    }
+
     modal.style.display = "flex";
     modal.style.opacity = "0";
-    // Pequeno delay para a transição de opacidade funcionar
+
+    slideIndex = 0;
+    mostrarSlide(slideIndex);
+
     setTimeout(() => {
         modal.style.transition = "opacity 0.4s ease";
         modal.style.opacity = "1";
     }, 10);
 }
 
+// Fechar modal
 function fecharModal() {
     modal.style.opacity = "0";
+
     setTimeout(() => {
         modal.style.display = "none";
-    }, 400); // Tempo da transição
+    }, 400);
 }
 
-// Fechar modal ao clicar fora da caixa branca
-window.onclick = function (event) {
-    if (event.target == modal) {
+// Fechar clicando fora
+window.addEventListener("click", (event) => {
+    if (event.target === modal) {
         fecharModal();
     }
-}
+});
+
 
 /* =====================================================
-   BOTÃO DE TEMA (DARK / LIGHT MODE)
+   DARK / LIGHT MODE
 ===================================================== */
+
 const themeToggle = document.getElementById("theme-toggle");
 const themeIcon = document.getElementById("theme-icon");
 
 themeToggle.addEventListener("click", () => {
+
     document.body.classList.toggle("light-theme");
 
+    // Troca ícone
     if (document.body.classList.contains("light-theme")) {
         themeIcon.classList.replace("fa-moon", "fa-sun");
     } else {
@@ -43,153 +61,125 @@ themeToggle.addEventListener("click", () => {
     }
 });
 
+
 /* =====================================================
-   ENVIO PARA WHATSAPP (LOGICA DE DADOS)
+   ENVIO WHATSAPP
 ===================================================== */
+
 function enviarWhats(event) {
-    event.preventDefault(); // Impede o recarregamento da página
 
-    document.addEventListener("DOMContentLoaded", () => {
-        const modal = document.getElementById("modalProjeto");
+    event.preventDefault();
 
-        window.abrirModal = function (event) {
-            if (event && (event.target.closest('a') || event.target.closest('i'))) {
-                return;
-            }
+    const nome = document.getElementById("nome").value;
+    const mensagem = document.getElementById("mensagem").value;
 
-            if (!modal) return;
+    // Seu número
+    const meuNumero = "5511969892900";
 
-            modal.style.display = "flex";
-            modal.style.opacity = "0";
-            setTimeout(() => {
-                modal.style.transition = "opacity 0.4s ease";
-                modal.style.opacity = "1";
-            }, 10);
-        };
+    const texto =
+        `Olá Eduardo! Meu nome é ${nome}.%0A%0AMensagem: ${mensagem}`;
 
-        window.fecharModal = function () {
-            if (!modal) return;
+    const url =
+        `https://wa.me/${meuNumero}?text=${texto}`;
 
-            modal.style.opacity = "0";
-            setTimeout(() => {
-                modal.style.display = "none";
-            }, 400);
-        };
-
-        window.onclick = function (event) {
-            if (event.target === modal) {
-                fecharModal();
-            }
-        };
-    });
-    function enviarWhats(event) {
-        event.preventDefault(); // Impede o recarregamento da página
-
-        const nome = document.getElementById("nome").value;
-        const mensagem = document.getElementById("mensagem").value;
-        const meuNumero = "55119XXXXXXXX"; // Coloque seu número aqui (com DDD)
-
-        const texto = `Olá Eduardo! Meu nome é *${nome}*.\n\n*Mensagem:* ${mensagem}`;
-        const url = `https://api.whatsapp.com/send?phone=${meuNumero}&text=${encodeURIComponent(texto)}`;
-
-        window.open(url, "_blank");
-    }
-
-    /* =====================================================
-       SCROLL REVEAL (EFEITO DE SURGIMENTO)
-    ===================================================== */
-    // Faz os elementos aparecerem suavemente enquanto você desce a página
-    const observerOptions = {
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = "1";
-                entry.target.style.transform = "translateY(0)";
-            }
-        });
-    }, observerOptions);
-
-    // Aplicar aos cards e seções
-    document.querySelectorAll('.card-habilidade, .exp-item, .projetos-card').forEach(el => {
-        el.style.opacity = "0";
-        el.style.transform = "translateY(30px)";
-        el.style.transition = "all 0.6s ease-out";
-        observer.observe(el);
-    });
-
-    let slideIndex = 0;
-
-    // Garante que o modal e os elementos existam antes de rodar
-    document.addEventListener("DOMContentLoaded", () => {
-        const modal = document.getElementById("modalProjeto");
-
-        // Função para abrir o modal
-        window.abrirModal = function (event) {
-            // Se clicar no link do GitHub, não abre o modal
-            if (event && (event.target.closest('a') || event.target.closest('i'))) {
-                return;
-            }
-
-            if (modal) {
-                modal.style.display = "flex";
-                slideIndex = 0; // Sempre começa na primeira foto
-                mostrarSlide(slideIndex);
-
-                setTimeout(() => {
-                    modal.style.transition = "opacity 0.4s ease";
-                    modal.style.opacity = "1";
-                }, 10);
-            }
-        };
-
-        window.fecharModal = function () {
-            if (modal) {
-                modal.style.opacity = "0";
-                setTimeout(() => {
-                    modal.style.display = "none";
-                }, 400);
-            }
-        };
-
-        // Fechar ao clicar fora da caixa
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                fecharModal();
-            }
-        };
-    });
-
-    // LÓGICA DA GALERIA
-    function mudarSlide(n) {
-        mostrarSlide(slideIndex += n);
-    }
-
-    function mostrarSlide(n) {
-        const slides = document.querySelectorAll(".galeria-slides img");
-        if (slides.length === 0) return;
-
-        // Loop infinito (volta ao início ou fim)
-        if (n >= slides.length) { slideIndex = 0; }
-        if (n < 0) { slideIndex = slides.length - 1; }
-
-        // Esconde todas e mostra a atual
-        slides.forEach(img => {
-            img.style.display = "none";
-            img.classList.remove("slide-ativo");
-        });
-
-        slides[slideIndex].style.display = "block";
-        slides[slideIndex].classList.add("slide-ativo");
-    }
+    window.open(url, "_blank");
 }
 
-// MENU MOBILE
-const toggleBtn = document.getElementById("menu-toggle");
-const menu = document.querySelector(".menu");
+
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
+
+const observerOptions = {
+    threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+        }
+    });
+
+}, observerOptions);
+
+
+// Elementos animados
+document.querySelectorAll(
+    ".card-habilidade, .exp-item, .projetos-card"
+).forEach(el => {
+
+    el.style.opacity = "0";
+    el.style.transform = "translateY(30px)";
+    el.style.transition = "all 0.6s ease-out";
+
+    observer.observe(el);
+});
+
+
+/* =====================================================
+   GALERIA DO MODAL
+===================================================== */
+
+function mudarSlide(n) {
+
+    mostrarSlide(slideIndex += n);
+}
+
+function mostrarSlide(n) {
+
+    const slides =
+        document.querySelectorAll(".galeria-slides img");
+
+    if (slides.length === 0) return;
+
+    // Loop infinito
+    if (n >= slides.length) {
+        slideIndex = 0;
+    }
+
+    if (n < 0) {
+        slideIndex = slides.length - 1;
+    }
+
+    // Esconde todos
+    slides.forEach(img => {
+
+        img.style.display = "none";
+        img.classList.remove("slide-ativo");
+    });
+
+    // Mostra atual
+    slides[slideIndex].style.display = "block";
+    slides[slideIndex].classList.add("slide-ativo");
+}
+
+
+/* =====================================================
+   MENU MOBILE
+===================================================== */
+
+const toggleBtn =
+    document.getElementById("menu-toggle");
+
+const menu =
+    document.querySelector(".menu");
 
 toggleBtn.addEventListener("click", () => {
+
     menu.classList.toggle("ativo");
+});
+
+
+// Fecha menu ao clicar em um link
+document.querySelectorAll(".menu-link").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        menu.classList.remove("ativo");
+    });
 });
