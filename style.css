@@ -217,13 +217,24 @@ strong {
 
 .exp-ponto {
     position: absolute;
-    left: -2.45rem;
+    left: -2.44rem;
     top: 5px;
     width: 12px;
     height: 12px;
     background: var(--primary);
     border-radius: 50%;
     box-shadow: 0 0 10px var(--primary);
+}
+
+.exp-atual {
+    position: absolute;
+    left: -2.45rem;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    background: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 10px yellow;
 }
 
 .exp-data {
