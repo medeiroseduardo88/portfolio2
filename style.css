@@ -228,7 +228,7 @@ strong {
 
 .exp-atual {
     position: absolute;
-    left: -2.45rem;
+    left: -2.50rem;
     top: 5px;
     width: 15px;
     height: 15px;
@@ -1108,6 +1108,6 @@ body.light-theme .logo img {
 }
 
 :root{
-  --cor-primaria: #00bfff;      /* laranja */
+  --cor-primaria: #00bfff;      
   --cor-primaria-hover: #ea580c;
 }
