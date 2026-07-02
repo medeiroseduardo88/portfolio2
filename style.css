@@ -398,6 +398,15 @@ footer h3 {
     -webkit-text-fill-color: transparent;
 }
 
+footer::after {
+    content: "© 2026 Eduardo Medeiros | Todos os direitos reservados.";
+    display: block;
+    margin-top: 3rem;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    letter-spacing: 1px;
+}
+
 h4 {
     color: coral;
 }
@@ -441,16 +450,6 @@ h4 {
 .btn-flutuante:hover {
     transform: scale(1.1) rotate(10deg) !important;
     background: #fff;
-}
-
-/* Texto de Copyright */
-footer::after {
-    content: "© 2026 Eduardo Medeiros | Todos os direitos reservados.";
-    display: block;
-    margin-top: 3rem;
-    font-size: 0.8rem;
-    color: var(--text-dim);
-    letter-spacing: 1px;
 }
 
 /* =====================================================
@@ -1023,11 +1022,7 @@ body.light-theme .logo img {
         width: 100%;
     }
 
-    /* FOOTER */
-    footer {
-        padding: 30px 20px;
-        text-align: center;
-    }
+   
 
     /* TEXTOS GERAIS */
     h2 {
@@ -1111,3 +1106,4 @@ body.light-theme .logo img {
   --cor-primaria: #00bfff;      
   --cor-primaria-hover: #ea580c;
 }
+

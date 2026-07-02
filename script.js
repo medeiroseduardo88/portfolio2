@@ -183,3 +183,84 @@ document.querySelectorAll(".menu-link").forEach(link => {
         menu.classList.remove("ativo");
     });
 });
+
+tsParticles.load("tsparticles", {
+    background: {
+        color: "transparent"
+    },
+
+    fpsLimit: 60,
+
+    interactivity: {
+        events: {
+            onHover: {
+                enable: true,
+                mode: "grab"
+            },
+            onClick: {
+                enable: true,
+                mode: "bubble"
+            }
+        },
+        modes: {
+            grab: {
+                distance: 180,
+                links: {
+                    opacity: 0.6
+                }
+            },
+            bubble: {
+                distance: 200,
+                size: 6,
+                duration: 0.5,
+                opacity: 1
+            }
+        }
+    },
+
+    particles: {
+        number: {
+            value: 33
+        },
+
+        color: {
+            value: ["#00bfff", "#7c3aed", "#22c55e"]
+        },
+
+        shape: {
+            type: "circle"
+        },
+
+        opacity: {
+            value: 0.4,
+            random: true
+        },
+
+        size: {
+            value: { min: 2, max: 5 },
+            random: true
+        },
+
+        move: {
+            enable: true,
+            speed: 0.6,
+            direction: "none",
+            random: true,
+            straight: false,
+            outModes: {
+                default: "out"
+            }
+        },
+
+        links: {
+            enable: true,
+            distance: 130,
+            opacity: 0.15,
+            width: 1,
+            color: "#ffffff"
+        }
+    },
+
+    detectRetina: true
+});
+
