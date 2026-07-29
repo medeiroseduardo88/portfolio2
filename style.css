@@ -324,7 +324,7 @@ h4 {
 
 .exp-marcador {
     position: absolute;
-    left: -2.5rem;
+    left: -2.65rem;
     top: 8px;
     width: 12px;
     height: 12px;
@@ -336,9 +336,9 @@ h4 {
 .exp-atual {
     width: 15px;
     height: 15px;
-    left: -2.56rem;
-    background: var(--accent-data);
-    box-shadow: 0 0 20px var(--accent-data);
+    left: -2.75rem;
+    background:  yellow;
+    box-shadow: 0 0 20px yellow;
 }
 
 .exp-data {
