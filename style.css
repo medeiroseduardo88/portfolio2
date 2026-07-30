@@ -313,7 +313,7 @@ h4 {
 .linha-do-tempo {
     position: relative;
     border-left: 2px solid var(--border);
-    padding-left: 2.2rem;
+    padding-left: 2.0rem;
     margin-left: 1rem;
 }
 
@@ -324,7 +324,7 @@ h4 {
 
 .exp-marcador {
     position: absolute;
-    left: -2.65rem;
+    left: -2.5rem;
     top: 8px;
     width: 12px;
     height: 12px;
@@ -336,9 +336,25 @@ h4 {
 .exp-atual {
     width: 15px;
     height: 15px;
-    left: -2.75rem;
-    background:  yellow;
+    left: -2.55rem;
+    background: yellow;
     box-shadow: 0 0 20px yellow;
+}
+
+.exp-pulsante {
+    animation: pulsar 2s ease-in-out infinite;
+}
+
+@keyframes pulsar {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 180, 84, 0.6), 0 0 20px var(--accent-data);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 180, 84, 0), 0 0 20px var(--accent-data);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 180, 84, 0), 0 0 20px var(--accent-data);
+    }
 }
 
 .exp-data {
