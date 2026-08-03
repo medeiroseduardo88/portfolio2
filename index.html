@@ -13,8 +13,8 @@
 </head>
 
 <body>
-    <button id="theme-toggle" class="btn-tema" aria-label="Alternar tema claro/escuro">
-        <i id="theme-icon" class="fas fa-moon" aria-hidden="true"></i>
+    <button id="botao-tema" class="btn-tema" aria-label="Alternar tema claro/escuro">
+        <i id="icone-tema" class="fas fa-moon" aria-hidden="true"></i>
     </button>
 
     <!-- ================= FUNDO / PARTÍCULAS ================= -->
@@ -26,7 +26,7 @@
             <a href="#inicio" aria-label="Ir para o início">EM</a>
         </div>
 
-        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+        <button class="menu-toggle" id="botao-menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
             <i class="fas fa-bars" aria-hidden="true"></i>
         </button>
 
@@ -105,7 +105,7 @@
                 </div>
             </div>
         </div>
-    </section> 
+    </section>
 
     <!-- ================= EXPERIÊNCIA ================= -->
     <section id="experiencia" class="experiencia">
@@ -190,6 +190,7 @@
     </section>
 
     <!-- ================= PROJETOS ================= -->
+    <!-- Cada card mostra apenas a foto de capa, título, descrição e o link do repositório. -->
     <section id="projetos" class="projetos">
         <span class="eyebrow">Portfólio</span>
         <h2 class="projetos-titulo">Meus Projetos</h2>
@@ -197,7 +198,7 @@
         <div class="projetos-caixa">
 
             <!-- PROJETO 1 -->
-            <article class="projetos-card" data-imagens='["./img/projeto-dashboard-vendas.png"]' data-titulo="Dashboard de Vendas" data-descricao="Dashboard em Power BI com indicadores de faturamento, ticket médio e desempenho por região, construído a partir de uma base tratada em Excel e modelada com relacionamentos entre tabelas.">
+            <article class="projetos-card">
                 <img src="./img/projeto-dashboard-vendas.png" class="projeto-imagem" alt="Dashboard de vendas no Power BI" loading="lazy">
                 <div class="conteudo-projeto">
                     <span class="tag-projeto">Power BI · Excel</span>
@@ -210,13 +211,12 @@
                         <a href="https://github.com/medeiroseduardo88" target="_blank" rel="noopener" class="btn-projeto">
                             <i class="fab fa-github" aria-hidden="true"></i> Repositório
                         </a>
-                        <button type="button" class="btn-projeto btn-projeto-outline btn-ver-projeto">Ver detalhes</button>
                     </div>
                 </div>
             </article>
 
             <!-- PROJETO 2 -->
-            <article class="projetos-card" data-imagens='["./img/projeto-analise-python.png"]' data-titulo="Análise Exploratória em Python" data-descricao="Notebook com tratamento de dados, estatística descritiva e visualizações em Pandas, Matplotlib e Seaborn para identificar padrões em uma base pública.">
+            <article class="projetos-card">
                 <img src="./img/projeto-analise-python.png" class="projeto-imagem" alt="Gráficos de análise exploratória de dados em Python" loading="lazy">
                 <div class="conteudo-projeto">
                     <span class="tag-projeto">Python · Pandas</span>
@@ -229,26 +229,23 @@
                         <a href="https://github.com/medeiroseduardo88" target="_blank" rel="noopener" class="btn-projeto">
                             <i class="fab fa-github" aria-hidden="true"></i> Repositório
                         </a>
-                        <button type="button" class="btn-projeto btn-projeto-outline btn-ver-projeto">Ver detalhes</button>
                     </div>
                 </div>
             </article>
 
             <!-- PROJETO 3 -->
-            <article class="projetos-card" data-imagens='["./img/projeto-portfolio.png"]' data-titulo="Portfólio Pessoal" data-descricao="Site pessoal responsivo desenvolvido em HTML, CSS e JavaScript puro, com tema claro/escuro, modal de projetos e animações de scroll.">
+            <article class="projetos-card">
                 <img src="./img/projeto-portfolio.png" class="projeto-imagem" alt="Página inicial deste portfólio" loading="lazy">
                 <div class="conteudo-projeto">
                     <span class="tag-projeto">HTML · CSS · JS</span>
                     <h3 class="info-projetos">Portfólio Pessoal</h3>
                     <p class="paragrafo-projetos">
-                        Este site: responsivo, com tema claro/escuro, modal de projetos e animações de entrada por
-                        scroll.
+                        Este site: responsivo, com tema claro/escuro e animações de entrada por scroll.
                     </p>
                     <div class="projeto-links">
                         <a href="https://github.com/medeiroseduardo88/Portfolio" target="_blank" rel="noopener" class="btn-projeto">
                             <i class="fab fa-github" aria-hidden="true"></i> Repositório
                         </a>
-                        <button type="button" class="btn-projeto btn-projeto-outline btn-ver-projeto">Ver detalhes</button>
                     </div>
                 </div>
             </article>
@@ -256,27 +253,10 @@
         </div>
     </section>
 
-    <!-- ================= MODAL DE PROJETOS ================= -->
-    <div class="modal-projeto" id="modalProjeto" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
-        <div class="modal-conteudo">
-            <button type="button" class="fechar-modal" id="fechar-modal" aria-label="Fechar">&times;</button>
-
-            <div class="galeria-container">
-                <button type="button" class="prev" id="modal-prev" aria-label="Imagem anterior">&#10094;</button>
-                <div class="galeria-slides" id="modal-galeria"></div>
-                <button type="button" class="next" id="modal-next" aria-label="Próxima imagem">&#10095;</button>
-            </div>
-
-            <span class="tag-projeto" id="modal-tag"></span>
-            <h3 id="modal-titulo"></h3>
-            <p id="modal-descricao"></p>
-        </div>
-    </div>
-
-    <!-- ================= CORMAÇÃO E CERTIFICADOS ================= -->
-        <section id="formacao" class="formacao">
+    <!-- ================= FORMAÇÃO E CERTIFICADOS ================= -->
+    <section id="formacao" class="formacao">
         <span class="eyebrow">Aprendizado Contínuo</span>
-        <h2 class="formacao-titulo">Formação & Certificados</h2>
+        <h2 class="formacao-titulo">Formação &amp; Certificados</h2>
 
         <div class="linha-do-tempo">
             <div class="exp-item">
@@ -288,77 +268,76 @@
                 </div>
             </div>
         </div>
-    </section>
 
         <div class="certificados-grid">
-    <div class="card-certificado">
-        <h3>Foundations Data, Data, Everywhere - Google</h3>
-        <p>Jul 2026 &middot; Coursera</p>
-        <div class="tags">
-            <span>Python</span>
-            <span>Análise de Dados</span>
-            <span>SQL</span>
-            <span>Tomada de Decisão</span>
-        </div>
-        <a href="certificados/Eduardo Medeiros Raposo - Curso Estatísticas com Python Frequencias e Medidas.pdf" target="_blank" rel="noopener" class="btn-projeto btn-projeto-outline">
-            Visualizar
-        </a>
-    </div>
+            <div class="card-certificado">
+                <h3>Foundations Data, Data, Everywhere - Google</h3>
+                <p>Jul 2026 &middot; Coursera</p>
+                <div class="tags">
+                    <span>Python</span>
+                    <span>Análise de Dados</span>
+                    <span>SQL</span>
+                    <span>Tomada de Decisão</span>
+                </div>
+                <a href="certificados/Eduardo Medeiros Raposo - Foundations Data, Data, Everywhere.pdf" target="_blank" rel="noopener" class="btn-projeto btn-projeto-outline">
+                    Visualizar
+                </a>
+            </div>
 
-    <div class="card-certificado">
-        <h3>Big Data & Analytics</h3>
-        <p>Jun 2026 &middot; FIAP</p>
-        <div class="tags">
-            <span>Análise de Dados</span>
-            <span>Tableau</span>
-            <span>Dashboard</span>
-            <span>KPI</span>
-        </div>
-        <a href="certificados/Eduardo Medeiros Raposo - Curso Estatísticas com Python Frequencias e Medidas.pdf" target="_blank" rel="noopener" class="btn-projeto btn-projeto-outline">
-            Visualizar
-        </a>
-    </div>
+            <div class="card-certificado">
+                <h3>Big Data & Analytics</h3>
+                <p>Jun 2026 &middot; FIAP</p>
+                <div class="tags">
+                    <span>Análise de Dados</span>
+                    <span>Tableau</span>
+                    <span>Dashboard</span>
+                    <span>KPI</span>
+                </div>
+                <a href="certificados/Eduardo Medeiros Raposo - Curso Estatísticas com Python Frequencias e Medidas.pdf" target="_blank" rel="noopener" class="btn-projeto btn-projeto-outline">
+                    Visualizar
+                </a>
+            </div>
 
-    <div class="card-certificado">
-        <h3>HTML e CSS</h3>
-        <p>Out 2025 &middot; Alura</p>
-        <div class="tags">
-            <span>Lógica de Programação</span>
-            <span>HTML</span>
-            <span>CSS</span>
-        </div>
-        <a href="certificados/Eduardo Medeiros Raposo - Curso HTML e CSS_ ambientes de desenvolvimento, estrutura de arquivos e tags - Alura.pdf" target="_blank" rel="noopener" class="btn-projeto btn-projeto-outline">
-            Visualizar
-        </a>
-    </div>
+            <div class="card-certificado">
+                <h3>HTML e CSS</h3>
+                <p>Out 2025 &middot; Alura</p>
+                <div class="tags">
+                    <span>Lógica de Programação</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                </div>
+                <a href="certificados/Eduardo Medeiros Raposo - Curso HTML e CSS_ ambientes de desenvolvimento, estrutura de arquivos e tags - Alura.pdf" target="_blank" rel="noopener" class="btn-projeto btn-projeto-outline">
+                    Visualizar
+                </a>
+            </div>
 
-    <div class="card-certificado">
-        <h3>Lógica de Programação</h3>
-        <p>Out 2025 &middot; Alura</p>
-        <div class="tags">
-            <span>Lógica de Programação</span>
-            <span>JavaScript</span>
-            <span>Algoritmo</span>
-        </div>
-        <a href="certificados/Eduardo Medeiros Raposo - Curso Lógica de programação_ mergulhe em programação com JavaScript - Alura.pdf" target="_blank" rel="noopener" class="btn-projeto btn-projeto-outline">
-            Visualizar
-        </a>
-    </div>
+            <div class="card-certificado">
+                <h3>Lógica de Programação</h3>
+                <p>Out 2025 &middot; Alura</p>
+                <div class="tags">
+                    <span>Lógica de Programação</span>
+                    <span>JavaScript</span>
+                    <span>Algoritmo</span>
+                </div>
+                <a href="certificados/Eduardo Medeiros Raposo - Curso Lógica de programação_ mergulhe em programação com JavaScript - Alura.pdf" target="_blank" rel="noopener" class="btn-projeto btn-projeto-outline">
+                    Visualizar
+                </a>
+            </div>
 
-    <div class="card-certificado">
-        <h3>Estatísticas com Python</h3>
-        <p>Fev 2025 &middot; Alura</p>
-        <div class="tags">
-            <span>Python</span>
-            <span>Estatística</span>
-            <span>Pandas</span>
-            <span>Análise de Dados</span>
+            <div class="card-certificado">
+                <h3>Estatísticas com Python</h3>
+                <p>Fev 2025 &middot; Alura</p>
+                <div class="tags">
+                    <span>Python</span>
+                    <span>Estatística</span>
+                    <span>Pandas</span>
+                    <span>Análise de Dados</span>
+                </div>
+                <a href="certificados/Eduardo Medeiros Raposo - Curso Estatísticas com Python Frequencias e Medidas.pdf" target="_blank" rel="noopener" class="btn-projeto btn-projeto-outline">
+                    Visualizar
+                </a>
+            </div>
         </div>
-        <a href="certificados/Eduardo Medeiros Raposo - Curso Estatísticas com Python Frequencias e Medidas.pdf" target="_blank" rel="noopener" class="btn-projeto btn-projeto-outline">
-            Visualizar
-        </a>
-    </div>
-</div>
     </section>
 
     <!-- ================= CONTATO ================= -->
@@ -366,7 +345,7 @@
         <span class="eyebrow">Vamos conversar</span>
         <h2 class="contatos-titulo">Entre em Contato</h2>
 
-        <form class="formulario-contato" id="form-contato">
+        <form class="formulario-contato" id="formulario-contato">
             <div class="grupo-form">
                 <label for="nome">Nome</label>
                 <input class="campo-form" id="nome" name="nome" placeholder="Digite seu nome" required>
