@@ -603,7 +603,7 @@ footer h3 {
     letter-spacing: 2px;
     text-transform: uppercase;
     background: linear-gradient(90deg, #fff, var(--primary));
-    -webkit-backgr ound-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
