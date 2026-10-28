@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eduardo Medeiros | Analista de Dados</title>
     <meta name="description" content="Portfólio de Eduardo Medeiros — Analista de Dados & Suporte de TI. SQL, Power BI, Python e infraestrutura.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Eduardo Medeiros | Analista de Dados">
+    <meta property="og:description" content="SQL, Power BI, Python e infraestrutura de TI: dados que viram decisão.">
+    <meta property="og:image" content="./img/Eduardo.jpeg">
+    <meta name="theme-color" content="#0c1615">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -17,7 +23,6 @@
         <i id="icone-tema" class="fas fa-moon" aria-hidden="true"></i>
     </button>
 
-    <!-- ================= FUNDO / PARTÍCULAS ================= -->
     <div id="tsparticles" aria-hidden="true"></div>
 
     <!-- ================= NAVEGAÇÃO ================= -->
@@ -41,23 +46,23 @@
         </ul>
     </nav>
 
-    <!-- ================= CABEÇALHO / HERO ================= -->
+    <!-- ================= HERO ================= -->
     <main id="inicio" class="cabecalho">
         <div class="skills-flutuando" aria-hidden="true">
-            <span class="tag tag1">SQL</span>
+            <!--<span class="tag tag1">SQL</span>
             <span class="tag tag2">Power BI</span>
             <span class="tag tag3">Python</span>
             <span class="tag tag4">Excel</span>
             <span class="tag tag5">Dashboards</span>
             <span class="tag tag6">Databricks</span>
-            <span class="tag tag7">PySpark</span>
+            <span class="tag tag7">PySpark</span>-->
         </div>
 
+        
         <img src="./img/Eduardo.jpeg" alt="Foto de Eduardo Medeiros" class="foto-perfil">
-        <p class="eyebrow">Itaquera, São Paulo</p>
+        <span class="selo-disponivel"><i aria-hidden="true"></i> Aberto a oportunidades em Dados e BI</span>
         <h1>Eduardo Medeiros</h1>
         <p class="cabecalho-subtitulo">Analista de Dados &amp; Suporte de TI Jr.</p>
-
         <div class="cabecalho-botoes">
             <a href="#projetos" class="btn-projeto">Ver projetos</a>
             <a href="livro/Eduardo Medeiros - Curriculo.pdf" class="btn-projeto btn-projeto-outline" download>Baixar currículo</a>
@@ -192,14 +197,11 @@
     </section>
 
     <!-- ================= PROJETOS ================= -->
-    <!-- Cada card mostra apenas a foto de capa, título, descrição e o link do repositório. -->
     <section id="projetos" class="projetos">
         <span class="eyebrow">Portfólio</span>
         <h2 class="projetos-titulo">Meus Projetos</h2>
 
         <div class="projetos-caixa">
-
-            <!-- PROJETO 1 -->
             <article class="projetos-card">
                 <img src="./img/projeto-dashboard-vendas.png" class="projeto-imagem" alt="Dashboard de vendas no Power BI" loading="lazy">
                 <div class="conteudo-projeto">
@@ -217,7 +219,6 @@
                 </div>
             </article>
 
-            <!-- PROJETO 2 -->
             <article class="projetos-card">
                 <img src="./img/projeto-analise-python.png" class="projeto-imagem" alt="Gráficos de análise exploratória de dados em Python" loading="lazy">
                 <div class="conteudo-projeto">
@@ -235,14 +236,14 @@
                 </div>
             </article>
 
-            <!-- PROJETO 3 -->
             <article class="projetos-card">
                 <img src="./projeto3/projeto1-1.png" class="projeto-imagem" alt="Página inicial deste portfólio" loading="lazy">
                 <div class="conteudo-projeto">
                     <span class="tag-projeto">HTML · CSS · JS</span>
                     <h3 class="info-projetos">Portfólio Pessoal</h3>
                     <p class="paragrafo-projetos">
-                        Este site: responsivo, com tema claro/escuro e animações de entrada por scroll.
+                        Este site: responsivo, com tema claro/escuro, animações ao rolar a página e formulário
+                        integrado ao WhatsApp.
                     </p>
                     <div class="projeto-links">
                         <a href="https://github.com/medeiroseduardo88/Portfolio2" target="_blank" rel="noopener" class="btn-projeto">
@@ -251,114 +252,96 @@
                     </div>
                 </div>
             </article>
-
         </div>
     </section>
 
     <!-- ================= FORMAÇÃO E CERTIFICADOS ================= -->
-   <section id="formacao" class="formacao">
-    <span class="eyebrow">Aprendizado Contínuo</span>
-    <h2 class="formacao-titulo">Formação &amp; Certificados</h2>
+    <section id="formacao" class="formacao">
+        <span class="eyebrow">Aprendizado Contínuo</span>
+        <h2 class="formacao-titulo">Formação &amp; Certificados</h2>
 
-    <!-- Linha do Tempo: Formação Acadêmica -->
-    <div class="linha-do-tempo">
-        <div class="exp-item">
-            <div class="exp-marcador exp-atual exp-pulsante" aria-hidden="true"></div>
-            <div class="exp-conteudo">
-                <span class="exp-data">2022 — Presente</span>
-                <h3>Bacharelado em Ciência da Computação</h3>
-                <h4>Universidade Cidade de São Paulo</h4>
+        <div class="linha-do-tempo">
+            <div class="exp-item">
+                <div class="exp-marcador exp-atual exp-pulsante" aria-hidden="true"></div>
+                <div class="exp-conteudo">
+                    <span class="exp-data">2022 — Presente</span>
+                    <h3>Bacharelado em Ciência da Computação</h3>
+                    <h4>Universidade Cidade de São Paulo</h4>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Grid de Certificados -->
-    <div class="certificados-grid">
-
-        <!-- Novo Certificado -->
-        <div class="card-certificado">
-            <h3>Análise de Dados na Prática</h3>
-            <p>Jul 2026 &middot; <span>Mackenzie</span></p>
-            <div class="tags">
-                <span>Análise de Dados</span>
-                <span>Estatística</span>
-                <span>Gráficos</span>
+        <div class="certificados-grid">
+            <div class="card-certificado">
+                <h3>Análise de Dados na Prática</h3>
+                <p>Jul 2026 &middot; <span>Mackenzie</span></p>
+                <div class="tags">
+                    <span>Análise de Dados</span>
+                    <span>Estatística</span>
+                    <span>Gráficos</span>
+                </div>
+                <a href="certificados/Eduardo Medeiros Raposo - Análise de Dados na Prática.pdf" target="_blank" rel="noopener" class="btn-projeto btn-projeto-outline">Visualizar</a>
             </div>
-            <a href="certificados/Eduardo Medeiros Raposo - Análise de Dados na Prática.pdf" target="_blank" rel="noopener" class="btn-projeto btn-projeto-outline">
-                Visualizar
-            </a>
-        </div>
 
-        <div class="card-certificado">
-            <h3>Foundations Data, Data, Everywhere - Google</h3>
-            <p>Jul 2026 &middot; <span>Coursera</span></p>
-            <div class="tags">
-                <span>Python</span>
-                <span>Análise de Dados</span>
-                <span>SQL</span>
-                <span>Tomada de Decisão</span>
+            <div class="card-certificado">
+                <h3>Foundations Data, Data, Everywhere - Google</h3>
+                <p>Jul 2026 &middot; <span>Coursera</span></p>
+                <div class="tags">
+                    <span>Python</span>
+                    <span>Análise de Dados</span>
+                    <span>SQL</span>
+                    <span>Tomada de Decisão</span>
+                </div>
+                <a href="certificados/Eduardo Medeiros Raposo - Foundations Data, Data, Everywhere.pdf" target="_blank" rel="noopener" class="btn-projeto btn-projeto-outline">Visualizar</a>
             </div>
-            <a href="certificados/Eduardo Medeiros Raposo - Foundations Data, Data, Everywhere.pdf" target="_blank" rel="noopener" class="btn-projeto btn-projeto-outline">
-                Visualizar
-            </a>
-        </div>
 
-        <div class="card-certificado">
-            <h3>Big Data &amp; Analytics</h3>
-            <p>Jun 2026 &middot; <span>FIAP</span></p>
-            <div class="tags">
-                <span>Análise de Dados</span>
-                <span>Tableau</span>
-                <span>Dashboard</span>
-                <span>KPI</span>
+            <div class="card-certificado">
+                <h3>Big Data &amp; Analytics</h3>
+                <p>Jun 2026 &middot; <span>FIAP</span></p>
+                <div class="tags">
+                    <span>Análise de Dados</span>
+                    <span>Tableau</span>
+                    <span>Dashboard</span>
+                    <span>KPI</span>
+                </div>
+                <a href="certificados/Eduardo Medeiros Raposo - Big Data & Analytics .pdf" target="_blank" rel="noopener" class="btn-projeto btn-projeto-outline">Visualizar</a>
             </div>
-            <a href="certificados/Eduardo Medeiros Raposo - Big Data & Analytics .pdf" target="_blank" rel="noopener" class="btn-projeto btn-projeto-outline">
-                Visualizar
-            </a>
-        </div>
 
-        <div class="card-certificado">
-            <h3>HTML e CSS</h3>
-            <p>Out 2025 &middot; <span>Alura</span></p>
-            <div class="tags">
-                <span>Lógica de Programação</span>
-                <span>HTML</span>
-                <span>CSS</span>
+            <div class="card-certificado">
+                <h3>HTML e CSS</h3>
+                <p>Out 2025 &middot; <span>Alura</span></p>
+                <div class="tags">
+                    <span>Lógica de Programação</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                </div>
+                <a href="certificados/Eduardo Medeiros Raposo - Curso HTML e CSS_ ambientes de desenvolvimento, estrutura de arquivos e tags - Alura.pdf" target="_blank" rel="noopener" class="btn-projeto btn-projeto-outline">Visualizar</a>
             </div>
-            <a href="certificados/Eduardo Medeiros Raposo - Curso HTML e CSS_ ambientes de desenvolvimento, estrutura de arquivos e tags - Alura.pdf" target="_blank" rel="noopener" class="btn-projeto btn-projeto-outline">
-                Visualizar
-            </a>
-        </div>
 
-        <div class="card-certificado">
-            <h3>Lógica de Programação</h3>
-            <p>Out 2025 &middot; <span>Alura</span></p>
-            <div class="tags">
-                <span>Lógica de Programação</span>
-                <span>JavaScript</span>
-                <span>Algoritmo</span>
+            <div class="card-certificado">
+                <h3>Lógica de Programação</h3>
+                <p>Out 2025 &middot; <span>Alura</span></p>
+                <div class="tags">
+                    <span>Lógica de Programação</span>
+                    <span>JavaScript</span>
+                    <span>Algoritmo</span>
+                </div>
+                <a href="certificados/Eduardo Medeiros Raposo - Curso Lógica de programação_ mergulhe em programação com JavaScript - Alura.pdf" target="_blank" rel="noopener" class="btn-projeto btn-projeto-outline">Visualizar</a>
             </div>
-            <a href="certificados/Eduardo Medeiros Raposo - Curso Lógica de programação_ mergulhe em programação com JavaScript - Alura.pdf" target="_blank" rel="noopener" class="btn-projeto btn-projeto-outline">
-                Visualizar
-            </a>
-        </div>
 
-        <div class="card-certificado">
-            <h3>Estatísticas com Python</h3>
-            <p>Fev 2025 &middot; <span>Alura</span></p>
-            <div class="tags">
-                <span>Python</span>
-                <span>Estatística</span>
-                <span>Pandas</span>
-                <span>Análise de Dados</span>
+            <div class="card-certificado">
+                <h3>Estatísticas com Python</h3>
+                <p>Fev 2025 &middot; <span>Alura</span></p>
+                <div class="tags">
+                    <span>Python</span>
+                    <span>Estatística</span>
+                    <span>Pandas</span>
+                    <span>Análise de Dados</span>
+                </div>
+                <a href="certificados/Eduardo Medeiros Raposo - Curso Estatísticas com Python Frequencias e Medidas.pdf" target="_blank" rel="noopener" class="btn-projeto btn-projeto-outline">Visualizar</a>
             </div>
-            <a href="certificados/Eduardo Medeiros Raposo - Curso Estatísticas com Python Frequencias e Medidas.pdf" target="_blank" rel="noopener" class="btn-projeto btn-projeto-outline">
-                Visualizar
-            </a>
         </div>
-
-    </div>
-</section>
+    </section>
 
     <!-- ================= CONTATO ================= -->
     <section id="contatos" class="contatos">
@@ -368,7 +351,7 @@
         <form class="formulario-contato" id="formulario-contato">
             <div class="grupo-form">
                 <label for="nome">Nome</label>
-                <input class="campo-form" id="nome" name="nome" placeholder="Digite seu nome" required>
+                <input class="campo-form" id="nome" name="nome" placeholder="Digite seu nome" autocomplete="name" required>
             </div>
 
             <div class="grupo-form">
@@ -390,9 +373,6 @@
             </a>
             <a href="https://www.linkedin.com/in/eduardo-medeiros-raposo-66579b193/" target="_blank" rel="noopener" aria-label="LinkedIn">
                 <i class="fab fa-linkedin" aria-hidden="true"></i>
-            </a>
-            <a href="https://www.instagram.com/medeiroseduardo/" target="_blank" rel="noopener" aria-label="Instagram">
-                <i class="fab fa-instagram" aria-hidden="true"></i>
             </a>
             <a href="livro/Eduardo Medeiros - Curriculo.pdf" download class="btn-flutuante" title="Baixar Currículo" aria-label="Baixar currículo em PDF">
                 <i class="fas fa-download" aria-hidden="true"></i>
